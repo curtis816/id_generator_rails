@@ -1,0 +1,11 @@
+<h1>身分證字號產生器</h1>
+<div>
+  您輸入的身分證字號是 <%= @id %><%= @q %> 驗證結果<%= @check %><br />
+  您登記縣市為 <%= @country %> <br /> 性別：<%= @gender %><br />
+  檢查碼：<%= @check_digit %>
+
+</div>
+<%= form_tag(idcheck_path, method: "get") do %>
+  <%= text_field_tag(:q,nil,placeholder: '請輸入身分證字號10碼') %>
+  <%= submit_tag("檢查") %>
+<% end %>

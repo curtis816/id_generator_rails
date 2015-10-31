@@ -57,9 +57,8 @@ Rails.application.routes.draw do
 
   root 'idlists#index'
 
-
-
-      get 'id_check/:id', to: "idlists#id_check",as: 'idlists'
+      get 'id_check', to: "idlists#id_check",as: 'idcheck'
+      get 'id_generate', to: "idlists#id_generate",as: 'idgenerate'
 
 
 
