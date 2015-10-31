@@ -30,6 +30,7 @@ class IdlistsController < ApplicationController
     @gender = gender?(@id)
     @country = convert_code_to_country(@id)
     @check_digit = get_check_digit(numbers)
+
     render 'show'
   end
 
@@ -38,7 +39,7 @@ class IdlistsController < ApplicationController
   def vaild_id?(id)
     numbers = calcute_amount_of_nine_digits(id)
 
-    id[9].to_i == get_check_digit(numbers)
+    id[9] == get_check_digit(numbers)
   end
 
   def convert_code_to_country(id)
@@ -80,12 +81,10 @@ class IdlistsController < ApplicationController
     end
 
     return check_number
-
   end
 
   def get_check_digit(number)
-    return (10 - (number % 10)) %10
+    return (10 - (number % 10)).to_s.last
   end
-
 
 end
