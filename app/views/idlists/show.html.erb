@@ -1,14 +1,21 @@
-<h1 class = "title">身分證字號產生器</h1>
+<h1 class = "title"><i class="fa fa-credit-card"></i> 身分證字號產生器</h1>
 <div class = "result">
-  您輸入的身分證字號是 <%= @id %><%= @q %> <br />
-  驗證結果<span class="<%= @check %>"><%= @check %></span><br />
-  登記縣市為 <%= @country %> <br />
+  您輸入的身分證字號是：<%= @id %><%= @q %> <br />
+  驗證結果：
+  <span class="<%= @check %>">
+    <% if @check == true %>
+      <i class="fa fa-check-square-o"></i> 通過驗證
+    <% else %>
+      <i class="fa fa-times"></i> 不通過驗證
+    <% end %>
+  </span><br />
+  登記縣市為 ：<%= @country %> <br />
   性別：<%= @gender %><br />
   檢查碼：<%= @check_digit %>
 </div>
 <div class="form">
   <%= form_tag(idcheck_path, method: "get") do %>
-    <%= text_field_tag(:q,nil,placeholder: '請輸入身分證字號10碼',id:"idtxt",maxlength: 10,onkeyup: "checklength(this.id)", autofocus: true) %>
+    <%= text_field_tag(:q,nil,placeholder: '請輸入身分證字號10碼',id:"idtxt",maxlength: 10,onkeyup: "checklength(this.id)",onchange: "checklength(this.id)", autofocus: true) %>
     <%= submit_tag("檢查", disabled: true,id: "sub") %>
   <% end %>
 </div>

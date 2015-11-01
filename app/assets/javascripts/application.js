@@ -17,7 +17,8 @@
 
 function checklength(x)
 {
-  var y = document.getElementById(x).value.length
+  var y = document.getElementById(x).value.length;
+  document.getElementById(x).value = document.getElementById(x).value.toUpperCase();
   if (y < 10)
   {
     document.getElementById("sub").disabled=true;

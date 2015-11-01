@@ -55,7 +55,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  root 'idlists#index'
+  root 'idlists#id_generate'
 
       get 'id_check', to: "idlists#id_check",as: 'idcheck'
       get 'id_generate', to: "idlists#id_generate",as: 'idgenerate'

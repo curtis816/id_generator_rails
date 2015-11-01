@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+  @import "font-awesome-sprockets";
+  @import "font-awesome";
 
  $white_opaque: rgba(250, 250, 250, .3);
  $dark: #1F7972;
@@ -30,6 +32,7 @@ body{
   border-radius: 7px;
   box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
   color: white;
+  font-size: 1.2em;
   line-height: 1.5em;
   margin-top: 20px;
   margin-left: auto;
@@ -44,25 +47,29 @@ body{
 .form {
   text-align: center;
   input[type="text"] {
-      width: 50%;
-      margin-right: 2%;
-      display: inline-block;
-      outline: none;
       background: rgba(255,255,255,0.4);
       border: none;
       border-radius: 4px;
+      display: inline-block;
+      font-size: 0.8em;
+      margin-right: 2%;
+      outline: none;
       padding: 0.5em 1em;
+      width: 50%;
     }
   input[type="submit"] {
       background: rgba(248,233,250,0.4);
-      outline: none;
-      border: none;
-      height: 20px;
       border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.8em;
+      height: 30px;
       width: 10%;
       display: inline-block;
+      outline: none;
       transition: all .4s ease-in-out;
-      cursor: pointer;
+
+
       &:hover {
         background: $dark;
         color: white;
@@ -79,6 +86,12 @@ body{
     color: white;
   }
 }
+.result{
+  margin-right: auto;
+  margin-left: auto;
+  padding: 3% 0 3% 0;
+  width: 70%;
+}
 .true{
   color: blue;
 }
@@ -87,10 +100,4 @@ body{
   font-size: xx-large;
   font-weight: 800;
   text-align: center;
-}
-.result{
-  margin-right: auto;
-  margin-left: auto;
-  padding: 3% 0 3% 0;
-  width: 70%;
 }
