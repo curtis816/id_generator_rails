@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function checklength(x)
+{
+  var y = document.getElementById(x).value.length
+  if (y < 10)
+  {
+    document.getElementById("sub").disabled=true;
+  }else
+  {
+    document.getElementById("sub").disabled=false;
+  }
+  //document.getElementById(x).value=y.toUpperCase()
+}

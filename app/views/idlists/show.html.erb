@@ -8,8 +8,8 @@
 </div>
 <div class="form">
   <%= form_tag(idcheck_path, method: "get") do %>
-    <%= text_field_tag(:q,nil,placeholder: '請輸入身分證字號10碼',maxlength: 10) %>
-    <%= submit_tag("檢查") %>
+    <%= text_field_tag(:q,nil,placeholder: '請輸入身分證字號10碼',id:"idtxt",maxlength: 10,onkeyup: "checklength(this.id)", autofocus: true) %>
+    <%= submit_tag("檢查", disabled: true,id: "sub") %>
   <% end %>
 </div>
 
