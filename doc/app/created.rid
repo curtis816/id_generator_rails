@@ -1,0 +1,7 @@
+Sun, 01 Nov 2015 12:06:56 +0800
+README.rdoc	Sun, 01 Nov 2015 12:06:27 +0800
+app/controllers/application_controller.rb	Sat, 24 Oct 2015 23:40:50 +0800
+app/controllers/idlists_controller.rb	Sat, 31 Oct 2015 21:41:18 +0800
+app/helpers/application_helper.rb	Sat, 24 Oct 2015 23:40:50 +0800
+app/helpers/idlists_helper.rb	Mon, 26 Oct 2015 22:11:35 +0800
+app/models/idgenerator.rb	Mon, 26 Oct 2015 22:43:07 +0800
